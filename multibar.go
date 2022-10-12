@@ -112,6 +112,7 @@ func (b *BarContainer) MakeBar(total int, prepend string) ProgressFunc {
 
 func (p *ProgressBar) SetTotal(t int) {
 	p.Total = t
+	p.Update(0)
 }
 
 func (p *ProgressBar) AddPrepend(str string) {
