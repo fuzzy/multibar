@@ -110,6 +110,10 @@ func (b *BarContainer) MakeBar(total int, prepend string) ProgressFunc {
 	return func(progress int) { bar.progressChan <- progress }
 }
 
+func (p *ProgressBar) SetTotal(t int) {
+	p.Total = t
+}
+
 func (p *ProgressBar) AddPrepend(str string) {
 	p.Prepend = str
 }
